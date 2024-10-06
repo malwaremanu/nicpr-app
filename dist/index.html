@@ -1,1 +1,98 @@
-Welcome to NICPR ERP.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        #app {
+            flex: 1;
+        }
+    </style>
+</head>
+<body class="bg-blue-100">
+    <!-- Top Navigation -->
+    <nav class="bg-white p-4">
+        <div class="container mx-auto flex justify-center">
+            <img src="nicpr_logo.png" alt="Logo" class="h-14 w-auto">
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="app" class="container mx-auto p-4">
+        <div class="mb-4">
+            <input type="text" class="px-4 py-2 w-full border border-gray-300 rounded" v-model="searchQuery" placeholder="Search employees...">
+        </div>
+        <ul class="">
+            <li class="uppercase px-4 py-2 cursor-pointer rounded border bg-blue-50 hover:bg-blue-200 m-1" v-for="employee in filteredEmployees" :key="employee.id" @click="showQRCode(employee)">
+                {{ employee.name }}
+            </li>
+        </ul>
+
+        <!-- QR Code Popup -->
+        <div v-if="showPopup" class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-95 w-full">
+            <div class="bg-white p-4 rounded shadow-lg uppercase" style="width: 300px;">
+                <img :src="'qrcodes/qr_code_' + selectedEmployee.id + '.png'" alt="QR Code" class="w-full">
+
+                <center>
+                    <h1 class="font-semibold"> {{ selectedEmployee.name }}</h1>
+                    <h3> {{ selectedEmployee.post }}</h3>
+                    <button @click="closePopup" class="rounded-full mt-4 px-4 py-2 bg-black text-xs text-white rounded">ok</button>
+                </center>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white text-center p-4">
+        ICMR-NICPR IT Cell, Noida
+    </footer>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                employees: [],
+                searchQuery: '',
+                showPopup: false,
+                selectedEmployee: null
+            },
+            computed: {
+                filteredEmployees() {
+                    return this.employees.filter(employee =>
+                        employee.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+                    );
+                }
+            },
+            methods: {
+                showQRCode(employee) {
+                    this.selectedEmployee = employee;
+                    this.showPopup = true;
+                },
+                closePopup() {
+                    this.showPopup = false;
+                    this.selectedEmployee = null;
+                }
+            },
+            mounted() {
+                fetch('emp.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.employees = data;
+                    })
+                    .catch(error => console.error('Error loading employee data:', error));
+            }
+        });
+    </script>
+</body>
+</html>
