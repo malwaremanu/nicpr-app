@@ -196,10 +196,23 @@ def generate_qr_code(data, file_name):
 
 # Generate QR codes for all employees
 for emp_id in employee_ids:
-    file_name = f"qrcodes/qr_code_{emp_id}.png"
-    generate_qr_code(emp_id, file_name)
-    print(f"Generated QR code for employee ID {emp_id} and saved as {file_name}")
+    e = emp_id
+    if len(emp_id) == 8:
+        e = emp_id
 
+    if len(emp_id) == 7:
+        e = "0" + str(emp_id)
+
+    
+    if len(emp_id) == 6:
+        e = "00" + str(emp_id)
+
+    if len(emp_id) == 5:
+        e = "000" + str(emp_id)
+
+    file_name = f"qrcodes/qr_code_{e}.png"
+    generate_qr_code(e, file_name)
+    print(f"Generated QR code for employee ID {emp_id} and saved as {file_name}")
 
 print("----"*20)
 print(emp_json)
