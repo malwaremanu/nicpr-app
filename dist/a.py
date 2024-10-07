@@ -3,11 +3,11 @@ import qrcode
 list_of_employees = """
 43992102	#	Aarti Govil	#	8860082339	#	Technical Assistant	@@@@@
 95815884	#	Abhilash Pandey	#	8957878484	#	Technical Assistant	@@@@@
-35404939	#	Agneesh Pratim Das	#	7321060674	#	Technical Officer 'B'	@@@@@
+35404939	#	Agneesh Pratim Das	#	7321060674	#	Technical Officer B	@@@@@
 33112747	#	AKSHAY SHANKAR	#	9068343269	#	Research Associate	@@@@@
 5189961	#	Aman Deep	#	8979105361	#	Technical Assistant	@@@@@
 42978114	#	AMIT KUMAR SAGAR	#	8826171394	#	Technical Assistant	@@@@@
-20210897	#	Amita	#	9811625099	#	Technical Officer 'A'	@@@@@
+20210897	#	Amita	#	9811625099	#	Technical Officer A	@@@@@
 32190036	#	Anil Kumar	#	9899360735	#	Scientist F	@@@@@
 13122299	#	Anil Kumar Keena	#	8505023022	#	Technical Assistant	@@@@@
 63085946	#	Anil Kumar Verma	#	8851860901	#	MTS ( Technical )	@@@@@
@@ -16,14 +16,14 @@ list_of_employees = """
 77221319	#	Anuj Kumar	#	9717406388	#	Scientist - C	@@@@@
 91406950	#	ANURAG	#	9882164926	#	Technical Assistant	@@@@@
 58242408	#	ARCHANA SINGH	#	9927500622	#	Social Worker	@@@@@
-89438334	#	Ashu	#	9540840849	#	Technical Officer 'A'	@@@@@
+89438334	#	Ashu	#	9540840849	#	Technical Officer A	@@@@@
 5151653	#	Avinash Malhotra	#	9873584595	#	U. D. Clerk	@@@@@
 8237667	#	Ayurshi Patil	#	7721837622	#	JRF	@@@@@
 6612359	#	Bansi Lal	#	7889639887	#	Driver	@@@@@
 39821245	#	Binayak Kumar	#	9650800642	#	Senior Research Fellow	@@@@@
 23293339	#	Chandan Govind	#	7541914804	#	Research Assistant	@@@@@
 90541183	#	Chander Prakash Yadav	#	7983921806	#	Scientist - C	@@@@@
-6788012	#	Chandresh	#	9891561199	#	Technical Officer 'A'	@@@@@
+6788012	#	Chandresh	#	9891561199	#	Technical Officer A	@@@@@
 7171048	#	Deepali Chanu Sanasam	#	7303669368	#	Project SC. B	@@@@@
 54972012	#	Dharmendra Kumar Sharma	#	9634042202	#	Tech-I	@@@@@
 86598028	#	Dheeraj Rajaura	#	9758575056	#	Staff Car Driver-Grade-I	@@@@@
@@ -43,7 +43,7 @@ list_of_employees = """
 46189408	#	Gaurab Kumar Jha	#	9304492698	#	Research Assistant	@@@@@
 92206115	#	Gaurav Sharma	#	9997528581	#	MTS ( Technical )	@@@@@
 83827281	#	Geetika Ahuja	#	7982971714	#	Assistant	@@@@@
-74299270	#	Himanshu Rohilla	#	9650421616	#	Technical Officer 'B'	@@@@@
+74299270	#	Himanshu Rohilla	#	9650421616	#	Technical Officer B	@@@@@
 10174631	#	Himanshu Sharma	#	8376068212	#	Project Officer	@@@@@
 23667497	#	Isha Joshi	#	8826255650	#	Project Officer	@@@@@
 75038864	#	Izazul Hasan	#	9927887621	#	Project Officer	@@@@@
@@ -54,18 +54,18 @@ list_of_employees = """
 38076459	#	Jyoti Rani	#	9582045836	#	SEANOR RESEARCH FELLOW	@@@@@
 94458231	#	Kailash Kumawat	#	8432063170	#	Staff Car Driver-Grade-I	@@@@@
 88168170	#	Kakoli Borkotoky	#	9930640862	#	Scientist - C	@@@@@
-18532561	#	Kalpana Verma	#	9013021200	#	Technical Officer 'A'	@@@@@
+18532561	#	Kalpana Verma	#	9013021200	#	Technical Officer A	@@@@@
 37083611	#	Kamran Manzoor	#	9999236157	#	Senior Research Fellow	@@@@@
 66203466	#	Krishna Magoo	#	9811505438	#	PA	@@@@@
 43536162	#	Kulvinder Kour	#	9086035313	#	Medical Social Worker	@@@@@
 55535158	#	Lata Joshi	#	8130643108	#	Research Assistant	@@@@@
-69351680	#	Latha Sriram	#	9871972558	#	Technical Officer 'C'	@@@@@
+69351680	#	Latha Sriram	#	9871972558	#	Technical Officer C	@@@@@
 71045285	#	Mahboob Ali	#	8506031138	#	Lab Attendant	@@@@@
 79614711	#	Malasha Kumari	#	9818416520	#	Scientist - C	@@@@@
 8861199	#	Mamta Patel	#	9454216258	#	Assistant	@@@@@
-18259801	#	Manu Bhardwaj	#	8860565767	#	Technical Officer 'B'	@@@@@
+18259801	#	Manu Bhardwaj	#	8860565767	#	Technical Officer B	@@@@@
 50055411	#	Manu Chaudhary	#	9810842906	#	Project Technician-A	@@@@@
-59452319	#	MANUPAL CHOUDHARY	#	9024343890	#	Technical Officer 'B'	@@@@@
+59452319	#	MANUPAL CHOUDHARY	#	9024343890	#	Technical Officer B	@@@@@
 38496332	#	Mayank Maheshwari	#	8840127141	#	JRF	@@@@@
 6740937	#	Mehreen Aftab	#	8826537860	#	Research Assistant	@@@@@
 96704813	#	Mohammad Sajid	#	6386916812	#	Research Associate	@@@@@
@@ -74,7 +74,7 @@ list_of_employees = """
 24888853	#	Monu Sharma	#	9034220055	#	Assistant	@@@@@
 42188279	#	Mr. PRAMOD KUMAR	#	8989142856	#	Account Officer	@@@@@
 32648256	#	Mritunjay Kumar	#	9968477254	#	Tech-I	@@@@@
-41433687	#	Mrs.Reena Dwivedi	#	9582121169	#	Technical Officer 'A'	@@@@@
+41433687	#	Mrs.Reena Dwivedi	#	9582121169	#	Technical Officer A	@@@@@
 40663647	#	Nasera Firdausi	#	7004360680	#	Research Assistant	@@@@@
 83220910	#	Naveen Kumar	#	8285184804	#	U. D. Clerk	@@@@@
 30807978	#	Nazneen Arif	#	8802309195	#	Scientist - D	@@@@@
@@ -84,8 +84,8 @@ list_of_employees = """
 95509864	#	Om Kant Mishra	#	7011123433	#	Tech-I	@@@@@
 33391253	#	Pankaj Asopa	#	9660842104	#	Tech-I	@@@@@
 24756650	#	Paras	#	8447445538	#	U. D. Clerk	@@@@@
-30887060	#	Payal Singh	#	9999339310	#	Technical Officer 'A'	@@@@@
-29076248	#	Pragya Sharma	#	9997016337	#	Technical Officer 'C'	@@@@@
+30887060	#	Payal Singh	#	9999339310	#	Technical Officer A	@@@@@
+29076248	#	Pragya Sharma	#	9997016337	#	Technical Officer C	@@@@@
 93203899	#	Pramod Kumar	#	9650437970	#	Scientist - C	@@@@@
 86257975	#	Prashant Kumar Singh	#	9560462996	#	Scientist - D	@@@@@
 30055317	#	Pratibha Agnihotri	#	9958724043	#	Senior Research Fellow	@@@@@
@@ -97,7 +97,7 @@ list_of_employees = """
 52726944	#	Rajesh	#	9990451695	#	Medical Social Worker	@@@@@
 70607146	#	Rajesh Kumar	#	9891454597	#	MTS ( Technical )	@@@@@
 53580026	#	Rajpal Suman	#	9760015935	#	Tech-I	@@@@@
-17436471	#	Rajshree	#	9911155621	#	Technical Officer 'A'	@@@@@
+17436471	#	Rajshree	#	9911155621	#	Technical Officer A	@@@@@
 83885244	#	Rajveer Kumar Raut	#	9555129930	#	Tech-I	@@@@@
 40493854	#	Rajveer Singh	#	9873311584	#	Section Officer	@@@@@
 48399052	#	Ranjana Prajapati	#	9315121260	#	Medical Social Worker	@@@@@
@@ -170,9 +170,24 @@ employee_ids = [
 emp_json = []
 for e in emps:
     ee = e.split("#")
+
+    e = str(ee[0]).strip()
+    if len(str(ee[0]).strip()) == 8:
+        e = str(ee[0]).strip()
+
+    if len(str(ee[0]).strip()) == 7:
+        e = "0" + str(str(ee[0]).strip())
+    
+    if len(str(ee[0]).strip()) == 6:
+        e = "00" + str(str(ee[0]).strip())
+
+    if len(str(ee[0]).strip()) == 5:
+        e = "000" + str(str(ee[0]).strip())
+
+
     employee_ids.append(str(ee[0]).strip())
     emp_json.append({
-        "id" : str(ee[0]).strip(),
+        "id" : e,
         "name" : str(ee[1]).strip(),
         "mobile" : str(ee[2]).strip(),
         "post" : str(ee[3]).strip()
@@ -212,7 +227,7 @@ for emp_id in employee_ids:
 
     file_name = f"qrcodes/qr_code_{e}.png"
     generate_qr_code(e, file_name)
-    print(f"Generated QR code for employee ID {emp_id} and saved as {file_name}")
+    # print(f"Generated QR code for employee ID {e} and saved as {file_name}")
 
-print("----"*20)
+# print("----"*20)
 print(emp_json)
